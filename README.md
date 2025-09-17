@@ -1,4 +1,3 @@
-License: MIT · Language: C++ & CUDA
 
 A high-performance implementation of the Jaya Algorithm applied to the 0/1 Knapsack Problem, featuring both serial (CPU) and parallel (CUDA GPU) versions. The project demonstrates significant improvements in execution time and solution quality using GPU parallelization.
 
