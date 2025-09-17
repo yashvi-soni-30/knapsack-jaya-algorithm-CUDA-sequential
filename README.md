@@ -88,7 +88,7 @@ where `x[i] ∈ {0,1}` and `C` is the knapsack capacity.
 Jaya Update Rule
 
 
-for (int i = 0; i < dim; i++) {
+
 
     double r1 = random(0,1), r2 = random(0,1);
     
@@ -98,7 +98,7 @@ for (int i = 0; i < dim; i++) {
                 
                 - r2 * (worst[i] - abs(sol[i]));
                 
-}
+
 
 Moves closer to best solution
 
@@ -116,6 +116,7 @@ Shared memory used for local reductions
 
 📌 Future Work
 
+
 Add comparisons with Genetic Algorithm, PSO, and RAO
 
 Use multi-GPU execution for very large instances
@@ -124,7 +125,7 @@ Explore hybrid Jaya + GA approach for knapsack
 
 👨‍💻 Author
 
-Your Name
-📧 your.email@example.com
 
-🔗 [GitHub / LinkedIn]
+Yashvi Soni
+📧 soniyashvi3142@gmail.com
+
