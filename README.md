@@ -80,7 +80,9 @@ where `x[i] ∈ {0,1}` and `C` is the knapsack capacity.
 3. Run cells to:  
    - Compile CPU and GPU versions  
    - Execute on sample datasets  
-   - Record performance and plot graphs  
+   - Record performance and plot graphs
+4.  !nvcc -arch=sm_75 knapsack_jaya.cu -o knapsack_jaya
+    !nvcc -arch=sm_75 knapsack_jayaS.cu -o knapsack_jayaS
 
 
 
