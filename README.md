@@ -48,63 +48,45 @@ where `x[i] ∈ {0,1}` and `C` is the knapsack capacity.
 ## 🏗️ Repository Structure  
 
 ├── src/
+
 │ ├── jaya_sequential.cpp # Sequential CPU implementation
+
 │ ├── jaya_cuda.cu # CUDA GPU implementation
+
 │ ├── utils.h # Common utilities
+
 │ └── utils.cpp # Helper functions
+
 │
+
 ├── data/
+
 │ └── instances/ # Knapsack problem instances
+
 │
 ├── results/
-│ ├── seq_results.txt # Serial execution results
-│ ├── cuda_results.txt # CUDA execution results
-│ └── comparison.csv # Performance comparison
-│
-├── notebooks/
-│ └── Jaya_Knapsack.ipynb # Google Colab notebook (ready-to-run)
-│
-├── docs/
-│ ├── algorithm.md # Detailed explanation of Jaya
-│ └── performance.md # Performance graphs and analysis
-│
-├── Makefile # Build configuration
-├── requirements.txt # Python deps for plotting (matplotlib, pandas)
+
+|
+
 └── README.md # This file
 
-yaml
-Copy code
 
----
 
 ## 🚀 Setup & Execution  
 
 ### Run on Google Colab  
-1. Open `notebooks/Jaya_Knapsack.ipynb` in Colab.  
+1. Open in Colab
 2. Enable **GPU runtime**: `Runtime > Change runtime type > GPU`.  
 3. Run cells to:  
    - Compile CPU and GPU versions  
    - Execute on sample datasets  
    - Record performance and plot graphs  
 
-### Manual Build (if running locally with CUDA)  
 
-```bash
-# CPU version
-g++ src/jaya_sequential.cpp src/utils.cpp -o bin/jaya_seq -O3
 
-# GPU version
-nvcc src/jaya_cuda.cu src/utils.cpp -o bin/jaya_cuda -O3 -arch=sm_60
-Run:
-
-bash
-Copy code
-./bin/jaya_seq data/instances/input1.txt
-./bin/jaya_cuda data/instances/input1.txt
 🔬 Algorithm Details
 Jaya Update Rule
-cpp
-Copy code
+
 for (int i = 0; i < dim; i++) {
     double r1 = random(0,1), r2 = random(0,1);
     newSol[i] = sol[i] 
@@ -135,6 +117,4 @@ Explore hybrid Jaya + GA approach for knapsack
 Yashvi Soni
 📧 soniyashvi3142@gmail.com
 
-
-## 🏗️ Repository Structure  
 
