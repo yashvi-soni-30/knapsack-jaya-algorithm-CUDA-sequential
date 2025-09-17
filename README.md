@@ -88,11 +88,17 @@ where `x[i] ∈ {0,1}` and `C` is the knapsack capacity.
 Jaya Update Rule
 
 for (int i = 0; i < dim; i++) {
+
     double r1 = random(0,1), r2 = random(0,1);
+    
     newSol[i] = sol[i] 
+    
                 + r1 * (best[i] - abs(sol[i])) 
+                
                 - r2 * (worst[i] - abs(sol[i]));
+                
 }
+
 Moves closer to best solution
 
 Moves away from worst solution
@@ -106,12 +112,14 @@ Each thread: evaluates fitness of one candidate solution
 
 Shared memory used for local reductions
 
+
 📌 Future Work
 Add comparisons with Genetic Algorithm, PSO, and RAO
 
 Use multi-GPU execution for very large instances
 
 Explore hybrid Jaya + GA approach for knapsack
+
 
 👨‍💻 Author
 Yashvi Soni
